@@ -23,7 +23,7 @@ const GET_CHALLENGES = gql`
   providedIn: 'root'
 })
 export class ChallengesService {
-
+isFavorite: number[]=[];
   constructor(private apollo: Apollo) { }
 
   getChallenges(): Observable<ApolloQueryResult<any>> {
@@ -37,5 +37,17 @@ export class ChallengesService {
           return (result.data as any).allChallenges.edges;
         }
       }));
+  }
+  addToFavorite(i: number) {
+    this.isFavorite.push(i);
+  }
+  removeFromFavorite(i: number) {
+    let index = this.isFavorite.indexOf(i)
+    if (index != -1) {
+      this.isFavorite.splice(index, 1);
+    }
+  }
+  checkFavorite(i: number): boolean {
+    return this.isFavorite.includes(i)
   }
 }
