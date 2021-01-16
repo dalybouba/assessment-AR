@@ -1,0 +1,4 @@
+<div style="font-size: 3em;" arion-hidden="true">
+    <i class="fas fa-heart highlighted" *ngIf="checkFavorite()" (click)="removeFromFavorite()"></i>
+    <i class="fas fa-heart" *ngIf="!checkFavorite()" (click)="addToFavorite()"></i>
+</div>
