@@ -1,0 +1,13 @@
+<div class="container box-wrap">
+    <div class="row box-wrap box">
+        <div class="col-8">
+            <ul (click)='goToSelectedItem()'>
+                <h2>{{challenge.node.title[0].text}}</h2>
+                <p>{{challenge.node.teaser[0].text}}</p>
+            </ul>
+        </div>
+        <div class="col-4 text-right">
+            <app-favorite-item [i]='i'></app-favorite-item>
+        </div>
+    </div>
+</div>
