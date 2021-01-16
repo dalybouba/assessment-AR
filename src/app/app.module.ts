@@ -5,11 +5,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GraphQLModule } from './graphql.module';
+import { ChallengesListComponent } from './challenges-list/challenges-list.component';
+import { ChallengeComponent } from './challenge/challenge.component';
+import { SelectedItemComponent } from './selected-item/selected-item.component';
+import { FavoriteItemComponent } from './favorite-item/favorite-item.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChallengesListComponent,
+    ChallengeComponent,
+    SelectedItemComponent,
+    FavoriteItemComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
