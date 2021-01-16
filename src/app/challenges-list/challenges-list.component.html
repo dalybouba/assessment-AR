@@ -1,0 +1,6 @@
+<section>
+    <app-header></app-header>
+    <div *ngFor="let challenge of challenges$ | async; let i = index">
+        <app-challenge [challenge]='challenge' [i]='i'></app-challenge>
+    </div>
+</section>
