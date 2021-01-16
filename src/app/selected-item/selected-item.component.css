@@ -1,0 +1,30 @@
+
+
+.box-wrap{
+ 
+  align-items:center;
+  justify-content:center;
+ 
+}
+.box{
+  padding:10px;
+  margin:0%;
+  background:white;
+  widows: 1px;
+  border:0px solid #d6d6d6;
+  box-shadow:0 2px 3px 0px rgba(0,0,0,0.25);
+  border-radius:30px;
+  transition:.2s all; 
+}
+.box-wrap:hover .box{
+  filter:blur(3px);
+  opacity:.5;
+  transform: scale(.98);
+  box-shadow:none;
+}
+.box-wrap:hover .box:hover{
+  transform:scale(1);
+  filter:blur(0px);
+  opacity:1;
+  box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
+}

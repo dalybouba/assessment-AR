@@ -1,0 +1,14 @@
+<div class="container">
+    <input type="button" value="Back To The List" routerLink='' />
+    <div class="row box-wrap box">
+        <div class="col-6">
+            <ul>
+                <h2>{{challenge?.node?.title[0]?.text}}</h2>
+               <div *ngIf="challenge?.node?.logo !=null"><img src="{{challenge?.node?.logo?.url}}" height="200px" width="500px" alt=""></div>
+            </ul>
+        </div>
+        <div class="col-6 text-right">
+            <app-favorite-item [i]='id'></app-favorite-item>
+        </div>
+    </div>
+</div>
