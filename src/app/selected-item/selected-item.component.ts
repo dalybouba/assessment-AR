@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./selected-item.component.css']
 })
 export class SelectedItemComponent implements OnInit {
-  challenges$: Observable<any>;
+ 
   challenge: any = {};
   id: number;
   constructor(private activatedRouter: ActivatedRoute, private challengesServices: ChallengesService) { }

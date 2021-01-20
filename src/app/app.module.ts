@@ -10,6 +10,7 @@ import { ChallengeComponent } from './challenge/challenge.component';
 import { SelectedItemComponent } from './selected-item/selected-item.component';
 import { FavoriteItemComponent } from './favorite-item/favorite-item.component';
 import { HeaderComponent } from './header/header.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HeaderComponent } from './header/header.component';
     ChallengeComponent,
     SelectedItemComponent,
     FavoriteItemComponent,
-    HeaderComponent
+    HeaderComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

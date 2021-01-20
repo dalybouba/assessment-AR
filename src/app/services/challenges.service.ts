@@ -48,6 +48,6 @@ isFavorite: number[]=[];
     }
   }
   checkFavorite(i: number): boolean {
-    return this.isFavorite.includes(i)
+    return this.isFavorite.includes(i);
   }
 }
