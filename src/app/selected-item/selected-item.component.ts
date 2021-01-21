@@ -26,4 +26,7 @@ export class SelectedItemComponent implements OnInit {
       }
     );
   }
+  checkFavorite() {
+    return this.challengesServices.checkFavorite(this.id);
+  }
 }

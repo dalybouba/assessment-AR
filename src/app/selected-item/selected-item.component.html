@@ -1,14 +1,27 @@
 <div class="container">
-    <input type="button" value="Back To The List" routerLink='' />
-    <div class="row box-wrap box">
-        <div class="col-6">
-            <ul>
-                <h2>{{challenge?.node?.title[0]?.text}}</h2>
-               <div *ngIf="challenge?.node?.logo !=null"><img src="{{challenge?.node?.logo?.url}}" height="200px" width="500px" alt=""></div>
-            </ul>
+    <button  type="button" class="btn btn-light" routerLink=''>
+        <i *ngIf="checkFavorite()" class="fas fa-arrow-left highlighted"></i>
+        <i *ngIf="!checkFavorite()" class="fas fa-arrow-left"></i>
+        Back To The List</button>
+    <div class="box-wrap box">
+        <div class="row">
+            <h2 class="col-4">{{challenge?.node?.title[0]?.text}}</h2>
+            <div class="col-8 text-left">
+                <app-favorite-item [i]='id'></app-favorite-item>
+            </div>
         </div>
-        <div class="col-6 text-right">
-            <app-favorite-item [i]='id'></app-favorite-item>
+        <div *ngIf="challenge?.node?.logo !=null"><img src="{{challenge?.node?.logo?.url}}" height="200px" width="500px"
+                alt="">
         </div>
     </div>
 </div>
+<!-- <div class="col-1 text-left">
+    <app-favorite-item [i]='id'></app-favorite-item>
+</div>
+<div class="col-10">
+    <a>
+        <h2>{{challenge?.node?.title[0]?.text}}</h2>
+        <div *ngIf="challenge?.node?.logo !=null"><img src="{{challenge?.node?.logo?.url}}" height="200px"
+                width="500px" alt="">
+        </div>
+    </a> -->

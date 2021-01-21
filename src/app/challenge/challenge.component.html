@@ -1,13 +1,17 @@
 <div class="container box-wrap">
     <div class="row box-wrap box">
         <div class="col-8">
-            <ul (click)='goToSelectedItem()'>
+            <a (click)='goToSelectedItem()'>
                 <h2>{{challenge.node.title[0].text}}</h2>
                 <p>{{challenge.node.teaser[0].text}}</p>
-            </ul>
+            </a>
         </div>
         <div class="col-4 text-right">
             <app-favorite-item [i]='i'></app-favorite-item>
         </div>
     </div>
 </div>
+<!-- <div style="font-size: 3em;" arion-hidden="true">
+    <i class="fas fa-heart highlighted" *ngIf="checkFavorite()"></i>
+    <i class="fas fa-heart" *ngIf="!checkFavorite()"></i>
+</div> -->

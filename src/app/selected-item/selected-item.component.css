@@ -1,4 +1,6 @@
-
+.highlighted{
+  color: #e0155d;
+}
 
 .box-wrap{
  
@@ -13,7 +15,7 @@
   widows: 1px;
   border:0px solid #d6d6d6;
   box-shadow:0 2px 3px 0px rgba(0,0,0,0.25);
-  border-radius:30px;
+  border-radius:5px;
   transition:.2s all; 
 }
 .box-wrap:hover .box{
